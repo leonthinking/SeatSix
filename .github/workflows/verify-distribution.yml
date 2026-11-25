@@ -1,0 +1,79 @@
+name: Verify v0.1.0 disk image
+on:
+  push:
+    branches: ['verify/v0.1.0']
+permissions:
+  contents: read
+env:
+  RELEASE_TAG: 'v0.1.0'
+  RELEASE_COMMIT: '814843ea245e68f251887c1b9dde0220599fdeff'
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Fetch the draft and verify the physical Mac's installer and source hashes
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          set -euo pipefail
+          test "$(gh api "repos/$GH_REPO/git/ref/tags/$RELEASE_TAG" --jq .object.sha)" = "$RELEASE_COMMIT"
+          test "$(gh release view "$RELEASE_TAG" --json isDraft --jq .isDraft)" = true
+          gh release download "$RELEASE_TAG" --dir assets
+          cd assets
+          test "$(ls -A | wc -l)" -eq 4
+          sha256sum -c <<'HASHES'
+          8ebe9b60fd56c26cad4ef6f9dc9b984f0171811367982137b78b021cde0f4207  SeatSix-0.1.0-universal.dmg
+          6a060c6263428bf51856ca4afd8affb1e81dec4cb7d34fda6b314abc0b5e9eba  SeatSix-0.1.0-decoder-sources.tar.gz
+          HASHES
+      - uses: actions/upload-artifact@v4
+        with:
+          name: verified-release-assets
+          path: assets/
+          if-no-files-found: error
+          compression-level: 0
+  install:
+    needs: fetch
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - runner: macos-26
+            arch: arm64
+          - runner: macos-26-intel
+            arch: x86_64
+    runs-on: ${{ matrix.runner }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ env.RELEASE_COMMIT }}
+          persist-credentials: false
+      - uses: actions/download-artifact@v4
+        with:
+          name: verified-release-assets
+          path: assets
+      - name: Install, launch, decode and seek on the native CPU
+        env:
+          NATIVE_ARCH: ${{ matrix.arch }}
+        run: |
+          set -euo pipefail
+          test "$(uname -m)" = "$NATIVE_ARCH"
+          test "$(git rev-parse HEAD)" = "$RELEASE_COMMIT"
+          python3 scripts/publish-release.py --check assets "$RELEASE_TAG"
+          mount=$(mktemp -d)
+          install_dir=$(mktemp -d)
+          mkdir -p "$install_dir/Applications"
+          app="$install_dir/Applications/SeatSix.app"
+          hdiutil attach -quiet -readonly -nobrowse -mountpoint "$mount" assets/SeatSix-0.1.0-universal.dmg
+          trap 'hdiutil detach -quiet "$mount"' EXIT
+          test "$(readlink "$mount/Applications")" = /Applications
+          ditto "$mount/SeatSix.app" "$app"
+          hdiutil detach -quiet "$mount"
+          trap - EXIT
+          codesign --verify --deep --strict "$app"
+          python3 scripts/bundle-media-libraries.py --verify-full-app "$app"
+          swiftc -parse-as-library scripts/verify-installed-app.swift -o "$install_dir/verify"
+          "$install_dir/verify" "$app" "$install_dir/profile"
+          /usr/bin/python3 scripts/test-release-decoder.py "$app"
