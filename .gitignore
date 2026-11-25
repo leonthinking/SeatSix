@@ -1,0 +1,15 @@
+.DS_Store
+.build/
+build/
+.runtime/
+__pycache__/
+.swiftpm/
+# Local connection exports and credential directories must never enter source control.
+connections.json
+Credentials/
+# Local release signing and notarization credentials
+*.p12
+*.p8
+*.keychain-db
+.env
+.env.local

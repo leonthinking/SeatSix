@@ -1,0 +1,375 @@
+{
+  "iina_commit": "f86d54276547df6d14104583ea604af67433f1e1",
+  "binary_sha256": "d6b3bb920f14780ec9c9df22e323e2bf72a5ca2b198473c67bf37581f0a60b6e",
+  "archives": [
+    {
+      "project": "dav1d",
+      "version": "1.5.3",
+      "file": "dav1d-1.5.3.tar.bz2",
+      "url": "https://code.videolan.org/videolan/dav1d/-/archive/1.5.3/dav1d-1.5.3.tar.bz2",
+      "sha256": "e099f53253f6c247580c554d53a13f1040638f2066edc3c740e4c2f15174ce22"
+    },
+    {
+      "project": "ffmpeg",
+      "version": "9.0.1",
+      "file": "ffmpeg-9.0.1.tar.xz",
+      "url": "https://ffmpeg.org/releases/ffmpeg-9.0.1.tar.xz",
+      "sha256": "cf38e0e28c7e5605942c4a77755349b0145804a397af37eb1fb4c77cb237f635"
+    },
+    {
+      "project": "fontconfig",
+      "version": "2.18.1",
+      "file": "fontconfig-2.18.1.tar.gz",
+      "url": "https://gitlab.freedesktop.org/fontconfig/fontconfig/-/archive/2.18.1/fontconfig-2.18.1.tar.gz",
+      "sha256": "e9309564717b6301230112b173f36c288489479d381d2f0add1210ca5b16ba7e"
+    },
+    {
+      "project": "freetype",
+      "version": "2.14.3",
+      "file": "freetype-2.14.3.tar.xz",
+      "url": "https://downloads.sourceforge.net/project/freetype/freetype2/2.14.3/freetype-2.14.3.tar.xz",
+      "sha256": "36bc4f1cc413335368ee656c42afca65c5a3987e8768cc28cf11ba775e785a5f"
+    },
+    {
+      "project": "fribidi",
+      "version": "1.0.16",
+      "file": "fribidi-1.0.16.tar.xz",
+      "url": "https://github.com/fribidi/fribidi/releases/download/v1.0.16/fribidi-1.0.16.tar.xz",
+      "sha256": "1b1cde5b235d40479e91be2f0e88a309e3214c8ab470ec8a2744d82a5a9ea05c"
+    },
+    {
+      "project": "harfbuzz",
+      "version": "14.2.1",
+      "file": "harfbuzz-14.2.1.tar.xz",
+      "url": "https://github.com/harfbuzz/harfbuzz/releases/download/14.2.1/harfbuzz-14.2.1.tar.xz",
+      "sha256": "a54a5d8e9380a41fbb762ce367bcbf7704792dfca0d93f1bbca86c5a57902e0e"
+    },
+    {
+      "project": "jpeg-turbo",
+      "version": "3.1.4.1",
+      "file": "libjpeg-turbo-3.1.4.1.tar.gz",
+      "url": "https://github.com/libjpeg-turbo/libjpeg-turbo/releases/download/3.1.4.1/libjpeg-turbo-3.1.4.1.tar.gz",
+      "sha256": "ecae8008e2cc9ade2f2c1bb9d5e6d4fb73e7c433866a056bd82980741571a022"
+    },
+    {
+      "project": "libarchive",
+      "version": "3.8.8",
+      "file": "libarchive-3.8.8.tar.xz",
+      "url": "https://github.com/libarchive/libarchive/releases/download/v3.8.8/libarchive-3.8.8.tar.xz",
+      "sha256": "3873a88801da067d0528a989af06877710529d50ee8fe6f3970cbb4302efb918"
+    },
+    {
+      "project": "libass",
+      "version": "0.17.5",
+      "file": "libass-0.17.5.tar.xz",
+      "url": "https://github.com/libass/libass/releases/download/0.17.5/libass-0.17.5.tar.xz",
+      "sha256": "2dca25c0e0c837ddf00b52011b3f82cac1e4ddd3ad018227806b0c2288864acc"
+    },
+    {
+      "project": "libbluray",
+      "version": "1.4.1",
+      "file": "libbluray-1.4.1.tar.xz",
+      "url": "https://download.videolan.org/videolan/libbluray/1.4.1/libbluray-1.4.1.tar.xz",
+      "sha256": "76b5dc40097f28dca4ebb009c98ed51321b2927453f75cc72cf74acd09b9f449"
+    },
+    {
+      "project": "libbs2b",
+      "version": "3.1.0",
+      "file": "libbs2b-3.1.0.tar.gz",
+      "url": "https://downloads.sourceforge.net/project/bs2b/libbs2b/3.1.0/libbs2b-3.1.0.tar.gz",
+      "sha256": "6aaafd81aae3898ee40148dd1349aab348db9bfae9767d0e66e0b07ddd4b2528"
+    },
+    {
+      "project": "libogg",
+      "version": "1.3.6",
+      "file": "libogg-1.3.6.tar.gz",
+      "url": "https://ftp.osuosl.org/pub/xiph/releases/ogg/libogg-1.3.6.tar.gz",
+      "sha256": "83e6704730683d004d20e21b8f7f55dcb3383cdf84c0daedf30bde175f774638"
+    },
+    {
+      "project": "libsoxr",
+      "version": "0.1.3",
+      "file": "soxr-0.1.3-Source.tar.xz",
+      "url": "https://downloads.sourceforge.net/project/soxr/soxr-0.1.3-Source.tar.xz",
+      "sha256": "b111c15fdc8c029989330ff559184198c161100a59312f5dc19ddeb9b5a15889"
+    },
+    {
+      "project": "libudfread",
+      "version": "1.2.0",
+      "file": "libudfread-1.2.0.tar.xz",
+      "url": "https://download.videolan.org/videolan/libudfread/libudfread-1.2.0.tar.xz",
+      "sha256": "bb477cbd4cfbfc7787d9d05b71ee5e70430f5cfebf1297497f7e83547958050f"
+    },
+    {
+      "project": "libunibreak",
+      "version": "7.0",
+      "file": "libunibreak-7.0.tar.gz",
+      "url": "https://github.com/adah1972/libunibreak/releases/download/libunibreak_7_0/libunibreak-7.0.tar.gz",
+      "sha256": "8c9a6e121736cd0d5c890ae3ae96f3f4010a19aa040f1dbded833a62a87717d3"
+    },
+    {
+      "project": "libvorbis",
+      "version": "1.3.7",
+      "file": "libvorbis-1.3.7.tar.xz",
+      "url": "https://ftp.osuosl.org/pub/xiph/releases/vorbis/libvorbis-1.3.7.tar.xz",
+      "sha256": "b33cc4934322bcbf6efcbacf49e3ca01aadbea4114ec9589d1b1e9d20f72954b"
+    },
+    {
+      "project": "libwebp",
+      "version": "1.6.0",
+      "file": "libwebp-1.6.0.tar.gz",
+      "url": "https://storage.googleapis.com/downloads.webmproject.org/releases/webp/libwebp-1.6.0.tar.gz",
+      "sha256": "e4ab7009bf0629fd11982d4c2aa83964cf244cffba7347ecd39019a9e38c4564"
+    },
+    {
+      "project": "little-cms2",
+      "version": "2.19",
+      "file": "lcms2-2.19.tar.gz",
+      "url": "https://downloads.sourceforge.net/project/lcms/lcms/2.19/lcms2-2.19.tar.gz",
+      "sha256": "49e7e134e4299733dd0eda434fa468997a28ab3d33fa397c642b03644f552216"
+    },
+    {
+      "project": "luajit",
+      "version": "8e6520a7aecd0517e792b359afbbfd7274791f5f",
+      "file": "luajit-8e6520a7aecd0517e792b359afbbfd7274791f5f.tar.gz",
+      "url": "https://github.com/LuaJIT/LuaJIT/archive/8e6520a7aecd0517e792b359afbbfd7274791f5f.tar.gz",
+      "sha256": "9c4c370559352e0622231d5a1f28e95ff56e2dce6308238e6588b0943aac5e63"
+    },
+    {
+      "project": "lz4",
+      "version": "1.10.0",
+      "file": "lz4-1.10.0.tar.gz",
+      "url": "https://github.com/lz4/lz4/archive/refs/tags/v1.10.0.tar.gz",
+      "sha256": "537512904744b35e232912055ccf8ec66d768639ff3abe5788d90d792ec5f48b"
+    },
+    {
+      "project": "mpv",
+      "version": "0.41.0",
+      "file": "mpv-0.41.0.tar.gz",
+      "url": "https://github.com/mpv-player/mpv/archive/refs/tags/v0.41.0.tar.gz",
+      "sha256": "ee21092a5ee427353392360929dc64645c54479aefdb5babc5cfbb5fad626209"
+    },
+    {
+      "project": "mujs",
+      "version": "1.3.9",
+      "file": "mujs-1.3.9.tar.gz",
+      "url": "https://mujs.com/downloads/mujs-1.3.9.tar.gz",
+      "sha256": "956d5a20dd4efe5aa58673558787b9e2539255f9bf62585e90e1921fa040d89d"
+    },
+    {
+      "project": "rubberband",
+      "version": "4.0.0",
+      "file": "rubberband-4.0.0.tar.bz2",
+      "url": "https://breakfastquay.com/files/releases/rubberband-4.0.0.tar.bz2",
+      "sha256": "af050313ee63bc18b35b2e064e5dce05b276aaf6d1aa2b8a82ced1fe2f8028e9"
+    },
+    {
+      "project": "speex",
+      "version": "1.2.1",
+      "file": "speex-1.2.1.tar.gz",
+      "url": "https://ftp.osuosl.org/pub/xiph/releases/speex/speex-1.2.1.tar.gz",
+      "sha256": "4b44d4f2b38a370a2d98a78329fefc56a0cf93d1c1be70029217baae6628feea"
+    },
+    {
+      "project": "svt-av1",
+      "version": "4.2.0",
+      "file": "svt-av1-4.2.0.tar.gz",
+      "url": "https://github.com/AOMediaCodec/SVT-AV1/archive/refs/tags/v4.2.0.tar.gz",
+      "sha256": "d9cb8d5fccbed565d038ae304cb00c5610f1f62388868102ca22132e7844921b"
+    },
+    {
+      "project": "uchardet",
+      "version": "0.0.8",
+      "file": "uchardet-0.0.8.tar.xz",
+      "url": "https://www.freedesktop.org/software/uchardet/releases/uchardet-0.0.8.tar.xz",
+      "sha256": "e97a60cfc00a1c147a674b097bb1422abd9fa78a2d9ce3f3fdcc2e78a34ac5f0"
+    },
+    {
+      "project": "zimg",
+      "version": "3.0.6",
+      "file": "zimg-3.0.6.tar.gz",
+      "url": "https://github.com/sekrit-twc/zimg/archive/refs/tags/release-3.0.6.tar.gz",
+      "sha256": "be89390f13a5c9b2388ce0f44a5e89364a20c1c57ce46d382b1fcc3967057577"
+    },
+    {
+      "project": "zstd",
+      "version": "1.5.7",
+      "file": "zstd-1.5.7.tar.gz",
+      "url": "https://github.com/facebook/zstd/archive/refs/tags/v1.5.7.tar.gz",
+      "sha256": "37d7284556b20954e56e1ca85b80226768902e2edabd3b649e9e72c0c9012ee3"
+    }
+  ],
+  "git": [
+    {
+      "project": "libjxl",
+      "version": "332feb17d17311c748445f7ee75c4fb55cc38530",
+      "path": "libjxl-0.11.2",
+      "file": "libjxl-0.11.2.tar.gz",
+      "url": "https://codeload.github.com/libjxl/libjxl/tar.gz/332feb17d17311c748445f7ee75c4fb55cc38530",
+      "sha256": "530343fa2305ebe730ed3a6358ac0d086f3859e83ed4842a939015f9d4676db2"
+    },
+    {
+      "project": "libjxl",
+      "version": "36533a866ed1ca4b75cf049f4521e4ec5fe24727",
+      "path": "libjxl-0.11.2/third_party/brotli",
+      "file": "libjxl-0.11.2-third_party-brotli.tar.gz",
+      "url": "https://codeload.github.com/google/brotli/tar.gz/36533a866ed1ca4b75cf049f4521e4ec5fe24727",
+      "sha256": "9dbeae5b67739ad00f8e355a20f9af5507ed578abace0a4939a54c6c2b597005"
+    },
+    {
+      "project": "libjxl",
+      "version": "5176347635785e53ee5cee92328f76fda766ecc6",
+      "path": "libjxl-0.11.2/third_party/lcms",
+      "file": "libjxl-0.11.2-third_party-lcms.tar.gz",
+      "url": "https://codeload.github.com/mm2/Little-CMS/tar.gz/5176347635785e53ee5cee92328f76fda766ecc6",
+      "sha256": "55c92b24f939a8493b07f076bee849af656a13cc69f330816e6936e95b312396"
+    },
+    {
+      "project": "libjxl",
+      "version": "6910c9d9165801d8827d628cb72eb7ea9dd538c5",
+      "path": "libjxl-0.11.2/third_party/googletest",
+      "file": "libjxl-0.11.2-third_party-googletest.tar.gz",
+      "url": "https://codeload.github.com/google/googletest/tar.gz/6910c9d9165801d8827d628cb72eb7ea9dd538c5",
+      "sha256": "bde221be7f3841fcbc3971665d77d717116394a42155d988ee6407dfc39f1f09"
+    },
+    {
+      "project": "libjxl",
+      "version": "94e0df6d0f8b44228de5be0ff35efb9f946a13c9",
+      "path": "libjxl-0.11.2/third_party/sjpeg",
+      "file": "libjxl-0.11.2-third_party-sjpeg.tar.gz",
+      "url": "https://codeload.github.com/webmproject/sjpeg/tar.gz/94e0df6d0f8b44228de5be0ff35efb9f946a13c9",
+      "sha256": "ac94917fe745a674eabf1e044f23ec55cd5a548c9869c06ec4b19da14ee0227d"
+    },
+    {
+      "project": "libjxl",
+      "version": "b2e692629c1fb19342517d7fb61f1cf83d075492",
+      "path": "libjxl-0.11.2/third_party/skcms",
+      "file": "libjxl-0.11.2-third_party-skcms.tar.gz",
+      "url": "https://codeload.github.com/google/skcms/tar.gz/b2e692629c1fb19342517d7fb61f1cf83d075492",
+      "sha256": "96e274f403135c19ad4e7f9272f03a64c0aa5615591b087457e7fd0a5f14af23"
+    },
+    {
+      "project": "libjxl",
+      "version": "457c891775a7397bdb0376bb1031e6e027af1c48",
+      "path": "libjxl-0.11.2/third_party/highway",
+      "file": "libjxl-0.11.2-third_party-highway.tar.gz",
+      "url": "https://codeload.github.com/google/highway/tar.gz/457c891775a7397bdb0376bb1031e6e027af1c48",
+      "sha256": "5124b0501c98d9930dbb065bfa1a5bbbd59ce0f12facb7e1e33aaef01a5f1f1a"
+    },
+    {
+      "project": "libjxl",
+      "version": "872555f4ba910252783af1507f9e7fe1653be252",
+      "path": "libjxl-0.11.2/third_party/libpng",
+      "file": "libjxl-0.11.2-third_party-libpng.tar.gz",
+      "url": "https://codeload.github.com/glennrp/libpng/tar.gz/872555f4ba910252783af1507f9e7fe1653be252",
+      "sha256": "f7ebcdc408a26d45244d9ef3d35d732a5482a77c55d1d40bf1eb748030691097"
+    },
+    {
+      "project": "libjxl",
+      "version": "51b7f2abdade71cd9bb0e7a373ef2610ec6f9daf",
+      "path": "libjxl-0.11.2/third_party/zlib",
+      "file": "libjxl-0.11.2-third_party-zlib.tar.gz",
+      "url": "https://codeload.github.com/madler/zlib/tar.gz/51b7f2abdade71cd9bb0e7a373ef2610ec6f9daf",
+      "sha256": "d9e270d46252734aa49770fbc544125391617956266f220bd63216c834f3a522"
+    },
+    {
+      "project": "libjxl",
+      "version": "ff8d743aaba05b3014f17e5475e576242fa979fc",
+      "path": "libjxl-0.11.2/testdata",
+      "file": "libjxl-0.11.2-testdata.tar.gz",
+      "url": "https://codeload.github.com/libjxl/testdata/tar.gz/ff8d743aaba05b3014f17e5475e576242fa979fc",
+      "sha256": "9c45a108df32a002a69465df896d33acf77d97c88fb59dffa0dff5628370e96f"
+    },
+    {
+      "project": "libjxl",
+      "version": "8ecba3647edb6dd940463fedf38ca33a8e2a73d1",
+      "path": "libjxl-0.11.2/third_party/libjpeg-turbo",
+      "file": "libjxl-0.11.2-third_party-libjpeg-turbo.tar.gz",
+      "url": "https://codeload.github.com/libjpeg-turbo/libjpeg-turbo/tar.gz/8ecba3647edb6dd940463fedf38ca33a8e2a73d1",
+      "sha256": "ed729127097af5000bfeddc6b3e679c4363bb1618ebfc07efb6b47f576471b4b"
+    },
+    {
+      "project": "libplacebo",
+      "version": "cee9b076f2c63104ccfd497fa79c39a867293ec4",
+      "path": "libplacebo-7.360.1",
+      "file": "libplacebo-7.360.1.tar.gz",
+      "url": "https://codeload.github.com/haasn/libplacebo/tar.gz/cee9b076f2c63104ccfd497fa79c39a867293ec4",
+      "sha256": "6f8fa218cbafd8e5f50b8a82d918e1d8bbb92f9f980820bc0b34d92e9b79e484"
+    },
+    {
+      "project": "libplacebo",
+      "version": "242f35efa067a46c595645eeda7b1771ea1f83b1",
+      "path": "libplacebo-7.360.1/demos/3rdparty/nuklear",
+      "file": "libplacebo-7.360.1-demos-3rdparty-nuklear.tar.gz",
+      "url": "https://codeload.github.com/Immediate-Mode-UI/Nuklear/tar.gz/242f35efa067a46c595645eeda7b1771ea1f83b1",
+      "sha256": "ac567995f917c10a722409e0141d226e737d06488b0a31166f6e4925da8e58f0"
+    },
+    {
+      "project": "libplacebo",
+      "version": "73db193f853e2ee079bf3ca8a64aa2eaf6459043",
+      "path": "libplacebo-7.360.1/3rdparty/glad",
+      "file": "libplacebo-7.360.1-3rdparty-glad.tar.gz",
+      "url": "https://codeload.github.com/Dav1dde/glad/tar.gz/73db193f853e2ee079bf3ca8a64aa2eaf6459043",
+      "sha256": "33dbeae44d8315ece57e14eba4b1b4a02ac5406d1c4f49cd20048c91522a6b9a"
+    },
+    {
+      "project": "libplacebo",
+      "version": "15206881c006c79667fe5154fe80c01c65410679",
+      "path": "libplacebo-7.360.1/3rdparty/jinja",
+      "file": "libplacebo-7.360.1-3rdparty-jinja.tar.gz",
+      "url": "https://codeload.github.com/pallets/jinja/tar.gz/15206881c006c79667fe5154fe80c01c65410679",
+      "sha256": "b88a20dcc2e34072fcf4159325bc6c34cd4b29a81a8b83d15d2f28ba561da296"
+    },
+    {
+      "project": "libplacebo",
+      "version": "297fc8e356e6836a62087949245d09a28e9f1b13",
+      "path": "libplacebo-7.360.1/3rdparty/markupsafe",
+      "file": "libplacebo-7.360.1-3rdparty-markupsafe.tar.gz",
+      "url": "https://codeload.github.com/pallets/markupsafe/tar.gz/297fc8e356e6836a62087949245d09a28e9f1b13",
+      "sha256": "da7c010c9c81a66ac73036558c1fcb6212b50482f43211cd1254035b94f82414"
+    },
+    {
+      "project": "libplacebo",
+      "version": "450bd2232225d6c7728a4108055ac2e37cef6475",
+      "path": "libplacebo-7.360.1/3rdparty/Vulkan-Headers",
+      "file": "libplacebo-7.360.1-3rdparty-Vulkan-Headers.tar.gz",
+      "url": "https://codeload.github.com/KhronosGroup/Vulkan-Headers/tar.gz/450bd2232225d6c7728a4108055ac2e37cef6475",
+      "sha256": "26df9841c30806a994e2fdf42f7c87bcb1ced9db9a06033469123939fb3fa075"
+    },
+    {
+      "project": "libplacebo",
+      "version": "97b54ca9e75f5303507699d27c6b4f4efe4641a1",
+      "path": "libplacebo-7.360.1/3rdparty/fast_float",
+      "file": "libplacebo-7.360.1-3rdparty-fast_float.tar.gz",
+      "url": "https://codeload.github.com/fastfloat/fast_float/tar.gz/97b54ca9e75f5303507699d27c6b4f4efe4641a1",
+      "sha256": "2b132274539286e41f37857cac22aa8441d21bd86d55de825a3342b149f66801"
+    }
+  ],
+  "patches": [
+    {
+      "file": "patches/mpv/17448-tone-mapping-param-fix.patch",
+      "url": "https://raw.githubusercontent.com/iina/deps-buildscripts/f86d54276547df6d14104583ea604af67433f1e1/patches/mpv/17448-tone-mapping-param-fix.patch",
+      "sha256": "ecd529075633365f4b9a3e0419bd058e2da7beb3dbf25f310ed09c3b8c701380"
+    },
+    {
+      "file": "patches/mpv/18092-lcms-fix.patch",
+      "url": "https://raw.githubusercontent.com/iina/deps-buildscripts/f86d54276547df6d14104583ea604af67433f1e1/patches/mpv/18092-lcms-fix.patch",
+      "sha256": "c93d0afdb74914665c5c488cf9a281fc88e88e1e979c4013cd3ff3232314576f"
+    },
+    {
+      "file": "patches/mpv/18383-coreaudio-crash-fix.patch",
+      "url": "https://raw.githubusercontent.com/iina/deps-buildscripts/f86d54276547df6d14104583ea604af67433f1e1/patches/mpv/18383-coreaudio-crash-fix.patch",
+      "sha256": "f074f6ae6ec5629a56108c6a31746bfc817242aa82f52b83f0cfadb10192af11"
+    },
+    {
+      "file": "patches/mpv/18384-audio-channel.patch",
+      "url": "https://raw.githubusercontent.com/iina/deps-buildscripts/f86d54276547df6d14104583ea604af67433f1e1/patches/mpv/18384-audio-channel.patch",
+      "sha256": "176cdef4eb860cfbffcaf821b186b1e6e7f5f1c1a1c246d728b5c28ef960a2d5"
+    },
+    {
+      "file": "patches/rubberband/001-fix-size_t.patch",
+      "url": "https://raw.githubusercontent.com/iina/deps-buildscripts/f86d54276547df6d14104583ea604af67433f1e1/patches/rubberband/001-fix-size_t.patch",
+      "sha256": "e6d8e9ec76834d043535191d09bb042d1b43d7d95220ecb6a31d2745a388820d"
+    }
+  ]
+}

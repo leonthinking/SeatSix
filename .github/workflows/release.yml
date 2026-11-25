@@ -1,0 +1,87 @@
+name: GitHub Release
+on:
+  push:
+    tags: ['v*']
+concurrency:
+  group: release-${{ github.ref }}
+  cancel-in-progress: false
+permissions:
+  contents: read
+jobs:
+  test:
+    uses: ./.github/workflows/ci.yml
+  build:
+    needs: test
+    runs-on: macos-26
+    outputs:
+      commit: ${{ steps.revision.outputs.commit }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - id: revision
+        run: echo "commit=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+      - name: Package the Universal player and corresponding decoder source
+        env:
+          RELEASE_TAG: ${{ github.ref_name }}
+        run: ./scripts/package-release.sh "$RELEASE_TAG"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: release
+          path: build/releases/${{ github.ref_name }}/
+          if-no-files-found: error
+          compression-level: 0
+  playback:
+    needs: build
+    strategy:
+      matrix:
+        runner: [macos-26, macos-26-intel]
+    runs-on: ${{ matrix.runner }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ needs.build.outputs.commit }}
+          persist-credentials: false
+      - uses: actions/download-artifact@v4
+        with:
+          name: release
+          path: assets
+      - name: Install the app, launch its window and decode HEVC and AC3
+        env:
+          RELEASE_TAG: ${{ github.ref_name }}
+        run: |
+          python3 scripts/publish-release.py --check assets "$RELEASE_TAG"
+          mount=$(mktemp -d)
+          hdiutil attach -quiet -readonly -nobrowse -mountpoint "$mount" "assets/SeatSix-${RELEASE_TAG#v}-universal.dmg"
+          trap 'hdiutil detach -quiet "$mount"' EXIT
+          install_dir=$(mktemp -d)
+          mkdir -p "$install_dir/Applications"
+          app="$install_dir/Applications/SeatSix.app"
+          ditto "$mount/SeatSix.app" "$app"
+          hdiutil detach -quiet "$mount"
+          trap - EXIT
+          codesign --verify --deep --strict "$app"
+          swiftc -parse-as-library scripts/verify-installed-app.swift -o "$install_dir/verify"
+          "$install_dir/verify" "$app" "$install_dir/profile"
+          python3 scripts/test-release-decoder.py "$app"
+  publish:
+    needs: [build, playback]
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ needs.build.outputs.commit }}
+          persist-credentials: false
+      - uses: actions/download-artifact@v4
+        with:
+          name: release
+          path: assets
+      - name: Verify the remote tag and publish the installer, source and checksums
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          RELEASE_TAG: ${{ github.ref_name }}
+          BUILT_COMMIT: ${{ needs.build.outputs.commit }}
+        run: ./scripts/publish-github-release.sh "$RELEASE_TAG" "$BUILT_COMMIT" assets

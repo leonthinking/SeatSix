@@ -1,0 +1,1 @@
+SeatSix 0.1 — native macOS media server client

@@ -1,0 +1,32 @@
+name: macOS
+on:
+  push:
+    branches: ['**']
+  pull_request:
+  workflow_call:
+permissions:
+  contents: read
+jobs:
+  system-player:
+    strategy:
+      matrix:
+        runner: [macos-26, macos-26-intel]
+    runs-on: ${{ matrix.runner }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - run: ./scripts/build-app.sh release --public
+      - name: Exercise system-player negotiation
+        env:
+          SEATSIX_SYSTEM_PLAYER: '1'
+        run: swift test --disable-sandbox --filter 'testBuildSelectsMatchingProfileAndEngineForAutomaticPlayback|testAutomaticSystemPlaybackNegotiatesHLSForMKVOnEmbyAndJellyfin|testCompatibilityRejectsMKVEvenWhenPathSaysMP4AndNeverOffersTranscode|SettingsViewTests'
+      - run: python3 -m unittest discover -s tests -p 'test_public*.py' -v
+  local-player:
+    runs-on: macos-26
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - run: brew install mpv ffmpeg
+      - run: ./scripts/test.sh
